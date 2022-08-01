@@ -95,8 +95,12 @@ WSGI_APPLICATION = 'tpsb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'txyxslvy',
+        'USER': 'txyxslvy',
+        'PASSWORD': 'ff-cr3Wxcu8oY0shU30dIepXH0qhM1f9',
+        'HOST': 'otto.db.elephantsql.com',
+        'PORT': '5432'
     }
 }
 

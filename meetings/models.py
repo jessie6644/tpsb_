@@ -31,17 +31,13 @@ class Meeting(models.Model):
         time = self.date.astimezone(tz)
         return f'[{time.strftime("%B %d, %Y %I:%M %p")}] {self.title}'
 
+
 class Agenda(models.Model):
     meeting = models.OneToOneField(Meeting, on_delete=CASCADE)
+    generated_pdf = models.BooleanField(default = False)
 
     def __str__(self) -> str:
         return f'{self.meeting.title} Agenda'
-
-    def generate_pdf(self) :
-        import meetings.create_pdf as create_pdf
-        create_pdf.generate_agenda_pdf(self, os.path.join(settings.BASE_DIR, f"uploads/{self.pk}.pdf"))
-        return mark_safe(f'<a class="button" href="{f"/uploads/{self.pk}.pdf"}">Generate PDF</a>')
-
 
 class AgendaItem(models.Model):
     agenda = models.ForeignKey(Agenda, on_delete=CASCADE)

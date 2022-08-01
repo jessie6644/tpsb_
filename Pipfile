@@ -16,6 +16,8 @@ pdfkit = "*"
 django-singleton-model = "*"
 "pdfminer.six" = "*"
 pypdf3 = "*"
+psycopg2-binary = "*"
+pytz = "*"
 
 [dev-packages]
 
