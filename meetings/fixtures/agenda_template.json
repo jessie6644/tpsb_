@@ -1,0 +1,11 @@
+[
+{
+    "model": "meetings.agendatemplate",
+    "pk": 1,
+    "fields": {
+        "title_page": "<br />\r\n<br />\r\n<br />\r\n<h1 style=\"text-align: center;\">{{ logo }}</h1>\r\n<br />\r\n<h1 style=\"text-align: center;\">{{ title }}</h1>\r\n<p></p>\r\n<h2 style=\"text-align: center;\">{{ date }}</h2>\r\n<p><!-- pagebreak --></p>",
+        "contents_header": "<h2 style=\"text-align: center;\">{{ title }}</h2>\r\n<h2 style=\"text-align: center;\">{{ date }}</h2>\r\n<h3 style=\"text-align: center;\">Livestream at: <a href=\"{{ recording_link }}\">{{ recording_link }}</a></h3>\r\n<hr />\r\n<p>{{ description|safe }}</p>\r\n<hr />\r\n<p>{{ table_of_contents }}</p>",
+        "contents_item": "<ol>\r\n<li value=\"{{ number }}. \">{{ title }}<br />{{ description|safe }}<br /><u>Attachments:</u></li>\r\n<ul>\r\n<li><a href=\"#{{ attachment_page }}\">{{ attachment }}</a></li>\r\n</ul>\r\n</ol>"
+    }
+}
+]

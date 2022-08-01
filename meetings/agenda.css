@@ -1,0 +1,38 @@
+p, li {
+    font-size: 16;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+
+td {
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+/* https://stackoverflow.com/a/30326819/13176711 */
+ol {
+    counter-reset: item;
+    margin-top: 1em;
+}
+
+ol > li {
+    counter-increment: item;
+    margin-top: 1em;
+}
+
+ol ol > li {
+    display: block;
+}
+
+ol ol > li:before {
+    content: counters(item, ".") ". ";
+    margin-left: -20px;
+}

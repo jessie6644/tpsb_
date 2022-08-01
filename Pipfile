@@ -1,0 +1,28 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+Django = "*"
+djangorestframework = "*"
+django-cors-headers = "*"
+requests = "*"
+django-ckeditor = "*"
+django-environ = "*"
+django-admin-interface = "==0.17.3"
+drf-extensions = "*"
+pdfkit = "*"
+django-singleton-model = "*"
+"pdfminer.six" = "*"
+pypdf3 = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
+
+[scripts]
+migrations = "python manage.py makemigrations"
+migrate = "python manage.py migrate"
+tests = "python manage.py test"
